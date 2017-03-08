@@ -1,10 +1,10 @@
 #include <LiquidCrystal.h>
 
-#define END_SENSOR A1
-#define START_SENSOR A2
+#define END_SENSOR A1 // sensor at start gate
+#define START_SENSOR A2 // sensor at finish line
 #define SENSOR_LOW 0
-#define SENSOR_HIGH 150 //250
-// sensor % is used
+
+// sensor pct is used
 // as a multiplier against the ambient
 // light
 #define SENSOR_PCT 0.8
@@ -21,6 +21,7 @@ int sensor_high_end = 0;
 void setup() {
   lcd.begin(16, 2);
   lcd.clear();
+
   pinMode(START_SENSOR, INPUT);
   pinMode(END_SENSOR, INPUT);
   Serial.begin(9600);      // open the serial port at 9600 bps:
@@ -100,6 +101,7 @@ void loop() {
     elapsed_time = endtime - starttime;
 
     // debounce finished sensor
+    // probably not strictly necessary
     while (finished) {
       finished = sensor_tripped(END_SENSOR, SENSOR_LOW, sensor_high_end);
     }
