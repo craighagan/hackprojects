@@ -41,7 +41,7 @@
 #define USING_OLED 2
 
 // set what you're using here:
-#define SENSOR USING_BMP
+#define SENSOR USING_BME
 #define MY_DISPLAY USING_OLED
 
 ////////////////////////////////////////////////////
@@ -51,6 +51,7 @@
 //
 #define SLEEP_SECONDS 8
 #define OLED_RESET 0
+#define BME_ADDRESS 0x76
 #define LCD_ADDRESS 0x27
 #define OLED_ADDRESS 0x3C
 #define DHTPIN 4
@@ -89,8 +90,7 @@ DHT sensor(DHTPIN, DHTTYPE); //// Initialize DHT sensor for normal 16mhz Arduino
 #endif
 
 #if SENSOR == USING_BME
-//Adafruit_BME280 sensor; // I2C
-#error BME280 not yet tested
+Adafruit_BME280 sensor; // I2C
 #endif
 
 #if SENSOR == USING_BMP
@@ -160,7 +160,10 @@ void setup_sensor() {
 
 #if SENSOR == USING_BME
   Serial.println("Using BME280 I2C Sensor");
-  sensor.begin();
+  if (!sensor.begin(0x76)) {
+    Serial.println("Could not find a valid BME280 sensor, check wiring!");
+    while (1);
+  }
 #endif
 
 #if SENSOR == USING_BMP
@@ -250,21 +253,21 @@ void write_information(float temperature,
   display.print(humidity, 2);
   display.println("%");
 
-  #if SENSOR == USING_BME
+#if SENSOR == USING_BME
   display.setCursor(18, 48);
   display.print("Pres: ");
   display.print(hpascals_to_inhg(pressure));
   display.println("mmHg");
 
-  #endif // BME
+#endif // BME
 
-  #if SENSOR == USING_BMP
+#if SENSOR == USING_BMP
   display.setCursor(18, 48);
   display.print("Pres: ");
   display.print(hpascals_to_inhg(pressure));
   display.println("mmHg");
 
-  #endif // BMP
+#endif // BMP
 
   display.display();
 #endif // DISPLAY
@@ -322,7 +325,7 @@ void enter_sleep(void)
 
 // Client variables
 char linebuf[80];
-int charcount=0;
+int charcount = 0;
 WiFiServer server(80);
 
 void setup_wireless() {
@@ -350,8 +353,8 @@ void respond_network_clients() {
   WiFiClient client = server.available();
   if (client) {
     Serial.println("New client");
-    memset(linebuf,0,sizeof(linebuf));
-    charcount=0;
+    memset(linebuf, 0, sizeof(linebuf));
+    charcount = 0;
     // an http request ends with a blank line
     boolean currentLineIsBlank = true;
     while (client.connected()) {
@@ -359,8 +362,8 @@ void respond_network_clients() {
         char c = client.read();
         Serial.write(c);
         //read char by char HTTP request
-        linebuf[charcount]=c;
-        if (charcount<sizeof(linebuf)-1) charcount++;
+        linebuf[charcount] = c;
+        if (charcount < sizeof(linebuf) - 1) charcount++;
         // if you've gotten to the end of the line (received a newline
         // character) and the line is blank, the http request has ended,
         // so you can send a reply
@@ -373,13 +376,13 @@ void respond_network_clients() {
           client.println("<!DOCTYPE HTML><html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
           client.println("<meta http-equiv=\"refresh\" content=\"30\"></head>");
           client.println("<body><div style=\"font-size: 3.5rem;\"><p>ESP32 - DHT</p><p>");
-          if(temperature >=25 ) {
+          if (temperature >= 25 ) {
             client.println("<div style=\"color: #930000;\">");
           }
-          else if(temperature <25 && temperature >=5 ) {
+          else if (temperature < 25 && temperature >= 5 ) {
             client.println("<div style=\"color: #006601;\">");
           }
-          else if(temperature <5){
+          else if (temperature < 5) {
             client.println("<div style=\"color: #009191;\">");
           }
           client.println(temperature, 2);
@@ -394,8 +397,8 @@ void respond_network_clients() {
         if (c == '\n') {
           // you're starting a new line
           currentLineIsBlank = true;
-          memset(linebuf,0,sizeof(linebuf));
-          charcount=0;
+          memset(linebuf, 0, sizeof(linebuf));
+          charcount = 0;
         } else if (c != '\r') {
           // you've gotten a character on the current line
           currentLineIsBlank = false;
@@ -427,6 +430,7 @@ void setup()
 #ifdef USE_ARDUINO
   setup_watchdog_timer();
 #endif
+
   Wire.begin();
   Serial.begin(9600);
 
@@ -451,7 +455,7 @@ void loop()
   respond_network_clients();
 #endif
 
-if (f_wdt == 1) {
+  if (f_wdt == 1) {
 #if SENSOR == USING_DHT
 
     humidity = sensor.readHumidity();
@@ -461,7 +465,9 @@ if (f_wdt == 1) {
 
 #endif
 #if SENSOR == USING_BME
-#error BME280 not yet tested
+    humidity = sensor.readHumidity();
+    temperature = sensor.readTemperature();
+    pressure = sensor.readPressure();
 #endif
 
 #if SENSOR == USING_BMP
@@ -494,7 +500,7 @@ if (f_wdt == 1) {
     Serial.println("going to sleep");
     ESP.deepSleep(SLEEP_SECONDS * 1000000);
     delay(100); // sometimes a few more instructions happen
-                 // making the non dead code not quite dead
+    // making the non dead code not quite dead
 #endif // USING_WIRELESS
 #endif // USE_ESP
 
