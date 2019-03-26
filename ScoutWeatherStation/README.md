@@ -11,6 +11,8 @@ This has been tested on both an ESP8266 and an Arduino board.
 
 ## Circuit 
 
+![circuit diagram](scout-weatherstation_bb.jpg)
+
 ### ESP8266 
 
 Connect I2C devices:
