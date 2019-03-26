@@ -51,7 +51,7 @@ https://github.com/esp8266/Arduino
 ### Libraries
 
 Install:
-#### Adafruit_Sensor 
+#### Adafruit Unified Sensor 
 author=Adafruit <info@adafruit.com>
 maintainer=Adafruit <info@adafruit.com>
 sentence=Required for all Adafruit Unified Sensor based libraries.
