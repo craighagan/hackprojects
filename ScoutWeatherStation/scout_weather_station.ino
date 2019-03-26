@@ -1,5 +1,5 @@
-#define USE_ESP 1
-#undef USE_ARDUINO
+#undef USE_ESP
+#define USE_ARDUINO 1
 
 #ifdef USE_ARDUINO
 #include <avr/sleep.h>
@@ -240,6 +240,14 @@ void write_information(float temperature,
   display.setTextSize(1);             // Normal 1:1 pixel scale
   display.setTextColor(WHITE);        // Draw white text
 
+  // dim display
+  display.ssd1306_command(0x81);
+  display.ssd1306_command(10); //max 157
+  //display.ssd1306_command(5); //max 157
+  display.ssd1306_command(0xD9);
+  display.ssd1306_command(17);  //max 34
+  //display.ssd1306_command(20);  //max 34
+
   display.setCursor(20, 2);
   display.println("Brookline Pack 6");
 
@@ -307,6 +315,8 @@ void enter_sleep(void)
   sleep_enable();
 
   /* Now enter sleep mode. */
+  Serial.println("going to sleep");
+  delay(100); // let serial write
   sleep_mode();
 
   /* The program will continue from here after the WDT timeout*/
@@ -415,6 +425,36 @@ void respond_network_clients() {
 }
 #endif // USING_WIRELESS
 
+
+////////////////////////////////////////////////////
+//
+// read_sensors
+//
+void read_sensors() {
+#if SENSOR == USING_DHT
+
+    humidity = sensor.readHumidity();
+    temperature = sensor.readTemperature();
+    // don't have pressure
+    pressure = 101325; // 1 atm, 30mmHg
+
+#endif
+#if SENSOR == USING_BME
+    humidity = sensor.readHumidity();
+    temperature = sensor.readTemperature();
+    pressure = sensor.readPressure();
+#endif
+
+#if SENSOR == USING_BMP
+    sensor.getEvent(&event);
+    pressure = event.pressure;
+    sensor.getTemperature(&temperature);
+    humidity = 0.0;
+#endif
+
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////////////
 //
 // mandatory arduino stuff
@@ -443,7 +483,6 @@ void setup()
   setup_display();
 }
 
-
 ////////////////////////////////////////////////////
 //
 // loop
@@ -456,35 +495,15 @@ void loop()
 #endif
 
   if (f_wdt == 1) {
-#if SENSOR == USING_DHT
-
-    humidity = sensor.readHumidity();
-    temperature = sensor.readTemperature();
-    // don't have pressure
-    pressure = 101325; // 1 atm, 30mmHg
-
-#endif
-#if SENSOR == USING_BME
-    humidity = sensor.readHumidity();
-    temperature = sensor.readTemperature();
-    pressure = sensor.readPressure();
-#endif
-
-#if SENSOR == USING_BMP
-    sensor.getEvent(&event);
-    pressure = event.pressure;
-    sensor.getTemperature(&temperature);
-    humidity = 0.0;
-#endif
-
+    read_sensors();
 
     write_information(temperature, humidity, pressure);
     // let everything write
     delay(100);
     // clear watchdog and go back to sleep
 
-#ifdef USE_ARDIONO
-    if_wdt = 0;
+#ifdef USE_ARDUINO
+    f_wdt = 0;
     enter_sleep();
 #endif
 
@@ -492,10 +511,7 @@ void loop()
 #ifdef USING_WIRELESS
     delay(100);
 #else
-    display.ssd1306_command(0x81);
-    display.ssd1306_command(10); //max 157
-    display.ssd1306_command(0xD9);
-    display.ssd1306_command(17);  //max 34
+
 
     Serial.println("going to sleep");
     ESP.deepSleep(SLEEP_SECONDS * 1000000);
@@ -503,7 +519,5 @@ void loop()
     // making the non dead code not quite dead
 #endif // USING_WIRELESS
 #endif // USE_ESP
-
-
-  }
+   }
 }
