@@ -49,6 +49,7 @@
 // set parameters for devices, such as i2c addresses
 // pins, etc
 //
+#define BME280_TEMP_OFFSET 0
 #define SLEEP_SECONDS 8
 #define OLED_RESET 0
 #define BME_ADDRESS 0x76
@@ -148,7 +149,7 @@ float pascals_to_mbar(float pascals) {
 // hpascals_to_inhg convert from pascals to inHg
 //
 float hpascals_to_inhg(float hpascals) {
-  return (hpascals * 100 * 0.00029529983071445);
+  return (hpascals * 0.00029529983071445);
 }
 
 ////////////////////////////////////////////////////
@@ -164,6 +165,16 @@ void setup_sensor() {
     Serial.println("Could not find a valid BME280 sensor, check wiring!");
     while (1);
   }
+
+//https://github.com/letscontrolit/ESPEasy/issues/164
+  sensor.setSampling(Adafruit_BME280::MODE_FORCED,
+                    Adafruit_BME280::SAMPLING_X1, // temperature
+                    Adafruit_BME280::SAMPLING_X1, // pressure
+                    Adafruit_BME280::SAMPLING_X1, // humidity
+                    Adafruit_BME280::FILTER_OFF   );
+
+
+
 #endif
 
 #if SENSOR == USING_BMP
@@ -219,6 +230,8 @@ void write_information(float temperature,
   Serial.print(celsius_to_fahrenheit(temperature), 2);
   Serial.println("F");
   Serial.print("Pressure: ");
+  Serial.print(pressure);
+  Serial.println("hPa");
   Serial.print(hpascals_to_inhg(pressure));
   Serial.println("inHg");
 
@@ -265,7 +278,7 @@ void write_information(float temperature,
   display.setCursor(18, 48);
   display.print("Pres: ");
   display.print(hpascals_to_inhg(pressure));
-  display.println("mmHg");
+  display.println("inHg");
 
 #endif // BME
 
@@ -273,7 +286,7 @@ void write_information(float temperature,
   display.setCursor(18, 48);
   display.print("Pres: ");
   display.print(hpascals_to_inhg(pressure));
-  display.println("mmHg");
+  display.println("inHg");
 
 #endif // BMP
 
@@ -436,12 +449,15 @@ void read_sensors() {
     humidity = sensor.readHumidity();
     temperature = sensor.readTemperature();
     // don't have pressure
-    pressure = 101325; // 1 atm, 30mmHg
+    pressure = 101325; // 1 atm, 30inHg
 
 #endif
 #if SENSOR == USING_BME
+    //https://www.esp8266.com/viewtopic.php?f=13&t=8030&sid=5b736d896eb9758f6ae56ce5aefbaceb&start=28
+
+    sensor.takeForcedMeasurement();
     humidity = sensor.readHumidity();
-    temperature = sensor.readTemperature();
+    temperature = sensor.readTemperature() - BME280_TEMP_OFFSET;
     pressure = sensor.readPressure();
 #endif
 
