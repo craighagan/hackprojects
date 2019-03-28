@@ -97,3 +97,8 @@ maintainer=Adafruit <info@adafruit.com>
 sentence=Arduino library for DHT11, DHT22, etc Temp & Humidity Sensors
 url=https://github.com/adafruit/DHT-sensor-library
 
+
+# Photos
+
+![prototype with ESP8266/NodeMCU](prototype_nodemcu.jpg)
+![prototype with ESP8266/NodeMCU](prototype_arduino_uno.jpg)
