@@ -1,5 +1,4 @@
-
-# Brookline Pack 6 Webelos Weather Station 
+# Brookline Pack 6 Webelos Weather Station
 
 This implements a simple weather station using temperature/humidity/pressure
 sensors such as BME280, BME180, or DHT22. Note: the latter two omit one of the three
@@ -9,11 +8,27 @@ For a display, either an LCD LED or an SSD1306 OLED are supported.
 
 This has been tested on both an ESP8266 and an Arduino board.
 
-## Circuit 
+## Circuit
 
 ![circuit diagram](scout-weatherstation_bb.jpg)
 
-### ESP8266 
+## Programmer I used for the pro-minis
+
+https://www.amazon.com/gp/product/B014GZTCC6
+
+https://www.ftdichip.com/Drivers/VCP.htm
+
+Of note, controller pins:
+* 1 - Black:GND
+* 2 - Blue:CTS
+* 3 - Red:5V
+* 4 - Green:TXD
+* 5 - White:RXD
+* 6 - Yellow:RTS
+
+
+
+### ESP8266
 
 Connect I2C devices:
 * SCL to D1
@@ -38,22 +53,22 @@ Connect I2C devices:
 
 Note: If using DHT22 sensor, connect it to pin 4
 
-## Modify the Code 
+## Modify the Code
 
 Edit the code, look for "set what you're using here"
 and set the appropriate definitions.
 
 
-## Configuring the Arduino IDE 
+## Configuring the Arduino IDE
 
-### ESP8266 Board 
+### ESP8266 Board
 Follow the directions here:
 https://github.com/esp8266/Arduino
 
 ### Libraries
 
 Install:
-#### Adafruit Unified Sensor 
+#### Adafruit Unified Sensor
 author=Adafruit <info@adafruit.com>
 maintainer=Adafruit <info@adafruit.com>
 sentence=Required for all Adafruit Unified Sensor based libraries.
@@ -72,7 +87,7 @@ maintainer=Adafruit <info@adafruit.com>
 sentence=Arduino library for BME280 sensors.
 url=https://github.com/adafruit/Adafruit_BME280_Library
 
-#### Adafruit_GFX_Library 
+#### Adafruit_GFX_Library
 author=Adafruit
 maintainer=Adafruit <info@adafruit.com>
 sentence=Adafruit GFX graphics core library, this is the 'core' class that all our other graphics libraries derive from.
