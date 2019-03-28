@@ -99,6 +99,7 @@ url=https://github.com/adafruit/DHT-sensor-library
 
 
 # Photos
-
+## ESP8266/NodeMCU
 ![prototype with ESP8266/NodeMCU](prototype_nodemcu.jpg)
+## Arduino
 ![prototype with ESP8266/NodeMCU](prototype_arduino_uno.jpg)
