@@ -1,28 +1,11 @@
-#undef USE_ESP
-#define USE_ARDUINO 1
-
-#ifdef USE_ARDUINO
-#include <avr/sleep.h>
-#include <avr/power.h>
-#include <avr/wdt.h>
-#endif
-
-#ifdef USE_ESP
-#include <ESP8266WiFi.h>
-#endif
-
-#include <SPI.h>
-#include <Wire.h>
-
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BMP085_U.h>
-#include <Adafruit_BME280.h>
-
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
-#include <LiquidCrystal_I2C.h>
-#include <DHT.h>
+////////////////////////////////////////////////////
+//
+// Brookline Pack 6 Weather Station
+// Craig Hagan
+//
+// MIT License
+// Free for public use
+// No statement of liability, etc.
 
 ////////////////////////////////////////////////////
 //
@@ -66,6 +49,41 @@
 // lcd SDA to A4 D2 on esp
 // dht to pin 4
 
+
+////////////////////////////////////////////////////
+
+
+// doing this so can easily
+// add ESP32 etc in one place
+#ifdef ARDUINO_ESP8266_NODE_MCU
+#define USE_ESP 1
+#endif
+
+
+#ifdef ARDUINO_ARCH_AVR
+#include <avr/sleep.h>
+#include <avr/power.h>
+#include <avr/wdt.h>
+#endif
+
+#ifdef USE_ESP
+#include <ESP8266WiFi.h>
+#endif
+
+#include <SPI.h>
+#include <Wire.h>
+
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BMP085_U.h>
+#include <Adafruit_BME280.h>
+
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#include <LiquidCrystal_I2C.h>
+#include <DHT.h>
+
+
 ////////////////////////////////////////////////////
 //
 // initialize variables
@@ -108,7 +126,7 @@ float pressure = 0.0;
 // for watchdog timer
 volatile int f_wdt = 1;
 
-#ifdef USE_ARDUINO
+#ifdef ARDUINO_ARCH_AVR
 ////////////////////////////////////////////////////
 //
 // Watchdog Interrupt Service. This
@@ -295,7 +313,7 @@ void write_information(float temperature,
 
 }
 
-#ifdef USE_ARDUINO
+#ifdef ARDUINO_ARCH_AVR
 ////////////////////////////////////////////////////
 //
 // set up watchdog timer
@@ -338,7 +356,7 @@ void enter_sleep(void)
   /* Re-enable the peripherals. */
   power_all_enable();
 }
-#endif // USE_ARDUINO
+#endif // ARDUINO_ARCH_AVR
 
 ////////////////////////////////////////////////////
 //
@@ -483,7 +501,7 @@ void read_sensors() {
 void setup()
 {
 
-#ifdef USE_ARDUINO
+#ifdef ARDUINO_ARCH_AVR
   setup_watchdog_timer();
 #endif
 
@@ -518,7 +536,7 @@ void loop()
     delay(100);
     // clear watchdog and go back to sleep
 
-#ifdef USE_ARDUINO
+#ifdef ARDUINO_ARCH_AVR
     f_wdt = 0;
     enter_sleep();
 #endif
