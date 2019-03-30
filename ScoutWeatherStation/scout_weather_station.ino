@@ -156,10 +156,10 @@ float celsius_to_fahrenheit(float celsius) {
 
 ////////////////////////////////////////////////////
 //
-// pascals_to_mbar convert from pascals to mbar
+// hpascals_to_mbar convert from pascals to mbar
 //
-float pascals_to_mbar(float pascals) {
-  return (pascals / 100.0);
+float hpascals_to_mbar(float hpascals) {
+  return hpascals / 100.0;
 }
 
 ////////////////////////////////////////////////////
@@ -250,8 +250,8 @@ void write_information(float temperature,
   Serial.print("Pressure: ");
   Serial.print(pressure);
   Serial.println("hPa");
-  Serial.print(hpascals_to_inhg(pressure));
-  Serial.println("inHg");
+  Serial.print(hpascals_to_mbar(pressure));
+  Serial.println("mbar");
 
 #if MY_DISPLAY == USING_LCD
   display.clear();
@@ -295,16 +295,16 @@ void write_information(float temperature,
 #if SENSOR == USING_BME
   display.setCursor(18, 48);
   display.print("Pres: ");
-  display.print(hpascals_to_inhg(pressure));
-  display.println("inHg");
+  display.print(hpascals_to_mbar(pressure));
+  display.println("mbar");
 
 #endif // BME
 
 #if SENSOR == USING_BMP
   display.setCursor(18, 48);
   display.print("Pres: ");
-  display.print(hpascals_to_inhg(pressure));
-  display.println("inHg");
+  display.print(hpascals_to_mbar(pressure));
+  display.println("mbar");
 
 #endif // BMP
 
