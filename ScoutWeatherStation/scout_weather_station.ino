@@ -33,7 +33,7 @@
 // pins, etc
 //
 #define BME280_TEMP_OFFSET 0
-#define SLEEP_SECONDS 8
+#define SLEEP_SECONDS 32
 #define OLED_RESET 0
 #define BME_ADDRESS 0x76
 #define LCD_ADDRESS 0x27
@@ -52,6 +52,8 @@
 
 ////////////////////////////////////////////////////
 
+// arduinos sleep in up to 8 second chunks
+#define ARDUINO_SLEEP trunc(SLEEP_SECONDS/8)
 
 // doing this so can easily
 // add ESP32 etc in one place
@@ -124,7 +126,7 @@ float temperature = 0.0;
 float pressure = 0.0;
 
 // for watchdog timer
-volatile int f_wdt = 1;
+volatile unsigned int f_wdt = ARDUINO_SLEEP;
 
 #ifdef ARDUINO_ARCH_AVR
 ////////////////////////////////////////////////////
@@ -134,13 +136,15 @@ volatile int f_wdt = 1;
 //
 ISR(WDT_vect)
 {
-  if (f_wdt == 0)
-  {
+  if (f_wdt == 0) {
     f_wdt = 1;
   }
-  else
-  {
-    Serial.println("WDT Overrun!!!");
+  else {
+    if (f_wdt < ARDUINO_SLEEP) {
+      f_wdt += 1;
+    } else {
+     Serial.println("WDT Overrun!!!");
+    }
   }
 }
 #endif
@@ -346,7 +350,7 @@ void enter_sleep(void)
   sleep_enable();
 
   /* Now enter sleep mode. */
-  Serial.println("going to sleep");
+  Serial.println("going to deep sleep");
   delay(100); // let serial write
   sleep_mode();
 
@@ -528,7 +532,7 @@ void loop()
   respond_network_clients();
 #endif
 
-  if (f_wdt == 1) {
+  if (f_wdt >= ARDUINO_SLEEP) {
     read_sensors();
 
     write_information(temperature, humidity, pressure);
@@ -538,20 +542,21 @@ void loop()
 
 #ifdef ARDUINO_ARCH_AVR
     f_wdt = 0;
-    enter_sleep();
+#endif
+  }
+
+#ifdef ARDUINO_ARCH_AVR
+  enter_sleep();
 #endif
 
 #ifdef USE_ESP
 #ifdef USING_WIRELESS
-    delay(100);
+  delay(100);
 #else
-
-
-    Serial.println("going to sleep");
-    ESP.deepSleep(SLEEP_SECONDS * 1000000);
-    delay(100); // sometimes a few more instructions happen
-    // making the non dead code not quite dead
+  Serial.println("going to esp deep sleep");
+  ESP.deepSleep(SLEEP_SECONDS * 1000000);
+  delay(100); // sometimes a few more instructions happen
+  // making the non dead code not quite dead
 #endif // USING_WIRELESS
 #endif // USE_ESP
-   }
 }
