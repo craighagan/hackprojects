@@ -36,6 +36,7 @@
 #define SLEEP_SECONDS 32
 #define OLED_RESET 0
 #define BME_ADDRESS 0x76
+#define BMP_ADDRESS 0x77
 #define LCD_ADDRESS 0x27
 #define OLED_ADDRESS 0x3C
 #define DHTPIN 4
@@ -57,7 +58,7 @@
 
 // doing this so can easily
 // add ESP32 etc in one place
-#ifdef ARDUINO_ESP8266_NODE_MCU
+#ifdef ARDUINO_ESP8266_NODEMCU
 #define USE_ESP 1
 #endif
 
@@ -183,7 +184,7 @@ void setup_sensor() {
 
 #if SENSOR == USING_BME
   Serial.println("Using BME280 I2C Sensor");
-  if (!sensor.begin(0x76)) {
+  if (!sensor.begin(BME_ADDRESS)) {
     Serial.println("Could not find a valid BME280 sensor, check wiring!");
     while (1);
   }
@@ -232,6 +233,9 @@ void setup_display() {
     Serial.println("SSD1306 allocation failed");
     for (;;); // Don't proceed, loop forever
   }
+
+  display.clearDisplay();
+  display.display();
 
 #endif
 
