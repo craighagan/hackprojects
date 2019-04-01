@@ -152,6 +152,42 @@ ISR(WDT_vect)
 
 ////////////////////////////////////////////////////
 //
+// get Vcc in millivolts
+//
+#ifdef ARDUINO_ARCH_AVR
+//http://forum.arduino.cc/index.php?topic=294903.0
+
+float getVcc() {
+  // Read 1.1V reference against AVcc
+  // set the reference to Vcc and the measurement to the internal 1.1V reference
+  #if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+    ADMUX = _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  #elif defined (__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+     ADMUX = _BV(MUX5) | _BV(MUX0) ;
+  #else
+    ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  #endif
+
+  delay(2); // Wait for Vref to settle
+  ADCSRA |= _BV(ADSC); // Start conversion
+  while (bit_is_set(ADCSRA,ADSC)); // measuring
+
+  uint8_t low  = ADCL; // must read ADCL first - it then locks ADCH
+  uint8_t high = ADCH; // unlocks both
+
+  long result = (high<<8) | low;
+
+  result = 1125300L / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
+  return result / 1000.0; // Vcc in volts
+}
+#else
+float getVcc() {
+  return ESP.getVcc();
+}
+#endif
+
+////////////////////////////////////////////////////
+//
 // celsius_to_fahrenheit convert from Celsius to
 // Fahrenheit
 //
@@ -234,8 +270,13 @@ void setup_display() {
     for (;;); // Don't proceed, loop forever
   }
 
-  display.clearDisplay();
-  display.display();
+#ifndef USING_WIRELESS
+  display.setCursor(20, 2);
+  display.println("Brookline Pack 6");
+#else
+  display.setCursor(20, 2);
+  display.println(WiFi.localIP());
+#endif
 
 #endif
 
@@ -287,35 +328,51 @@ void write_information(float temperature,
   display.ssd1306_command(17);  //max 34
   //display.ssd1306_command(20);  //max 34
 
+#ifndef USING_WIRELESS
   display.setCursor(20, 2);
   display.println("Brookline Pack 6");
+#else
+  display.setCursor(20, 2);
+  display.println(WiFi.localIP());
+#endif
 
   display.setCursor(18, 16);
   display.print("Temp: ");
   display.print(celsius_to_fahrenheit(temperature), 2);
   display.println("F");
 
-  display.setCursor(24, 32);
+#if SENSOR != USING_BMP
+  display.setCursor(24, 30);
   display.print("Hum: ");
   display.print(humidity, 2);
   display.println("%");
+#else
+  display.setCursor(24, 30);
+  display.print("Hum: ");
+  display.print(humidity, 2);
+  display.println("%");
+#endif
 
 #if SENSOR == USING_BME
-  display.setCursor(18, 48);
+  display.setCursor(18, 43);
   display.print("Pres: ");
-  display.print(hpascals_to_mbar(pressure));
+  display.print(hpascals_to_mbar(pressure), 2);
   display.println("mbar");
 
 #endif // BME
 
 #if SENSOR == USING_BMP
-  display.setCursor(18, 48);
+  display.setCursor(18, 43);
   display.print("Pres: ");
-  display.print(hpascals_to_mbar(pressure));
+  display.print(hpascals_to_mbar(pressure), 2);
   display.println("mbar");
 
 #endif // BMP
 
+  display.setCursor(12, 56);
+  display.print("Power: ");
+  display.print(getVcc(), 2);
+  display.println("V");
   display.display();
 #endif // DISPLAY
 
