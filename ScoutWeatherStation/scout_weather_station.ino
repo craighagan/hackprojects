@@ -414,6 +414,8 @@ void enter_sleep(void)
   Serial.println("going to deep sleep");
   delay(100); // let serial write
   sleep_mode();
+  sleep_bod_disable();  // Additionally disable the Brown out detector
+
 
   /* The program will continue from here after the WDT timeout*/
   sleep_disable(); /* First thing to do is disable sleep. */
