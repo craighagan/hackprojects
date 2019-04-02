@@ -322,8 +322,8 @@ void write_information(float temperature,
 
   // dim display
   display.ssd1306_command(0x81);
-  display.ssd1306_command(10); //max 157
-  //display.ssd1306_command(5); //max 157
+  //display.ssd1306_command(10); //max 157
+  display.ssd1306_command(5); //max 157
   display.ssd1306_command(0xD9);
   display.ssd1306_command(17);  //max 34
   //display.ssd1306_command(20);  //max 34
@@ -407,7 +407,7 @@ void setup_watchdog_timer() {
 //
 void enter_sleep(void)
 {
-  set_sleep_mode(SLEEP_MODE_PWR_SAVE);   /* EDIT: could also use SLEEP_MODE_PWR_DOWN for lowest power consumption. */
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);   /* EDIT: could also use SLEEP_MODE_PWR_DOWN for lowest power consumption. */
   sleep_enable();
 
   /* Now enter sleep mode. */
