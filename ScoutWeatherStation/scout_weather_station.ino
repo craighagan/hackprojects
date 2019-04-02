@@ -322,11 +322,11 @@ void write_information(float temperature,
 
   // dim display
   display.ssd1306_command(0x81);
-  //display.ssd1306_command(10); //max 157
-  display.ssd1306_command(5); //max 157
+  //display.ssd1306_command(5); //max 157
+  display.ssd1306_command(0); //max 157
   display.ssd1306_command(0xD9);
-  display.ssd1306_command(17);  //max 34
-  //display.ssd1306_command(20);  //max 34
+  //display.ssd1306_command(17); //max 34
+  display.ssd1306_command(0); //max 34
 
 #ifndef USING_WIRELESS
   display.setCursor(20, 2);
