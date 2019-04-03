@@ -58,10 +58,10 @@ Note: DHT sensor not tested on this device.
 ### Arduino
 
 Connect I2C devices:
-* SCL to A5
-* SDA to D4
-* 3V  to VCC
-* GND to GND
+* SCL to A5 (yellow wire in final picture)
+* SDA to A4 (green wire in final picture)
+* 3V  to VCC (red wire in final picture)
+* GND to GND (black wire in final picture)
 
 Note: If using DHT22 sensor, connect it to pin 4
 
@@ -70,6 +70,8 @@ These work great, and are what the final boards will be.
 
 While running the circuit, they draw 3.5ma with the power LED while sleeping, 2.1ma if you break it off. When awake, they go up to 5-6ma but are awake for a fraction of a second every 30s with the default sleep
 settings.
+
+Wire it as above, be aware that A4/A5 are offset pins right near the CPU, not along the edge.
 
 ## Modify the Code
 
@@ -132,6 +134,8 @@ url=https://github.com/adafruit/DHT-sensor-library
 
 
 # Photos
+## Arduino Pro-Mini 3.3v final prototype
+![prototype with Arduino Pro-Mini 3.3v](final_prototype_pro_mini.jpg)
 ## ESP8266/NodeMCU
 ![prototype with ESP8266/NodeMCU](prototype_nodemcu.jpg)
 ## Arduino
