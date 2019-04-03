@@ -13,9 +13,21 @@ This has been tested on both an ESP8266 and an Arduino board.
 ![circuit diagram](scout-weatherstation_bb.jpg)
 
 ## Programmer I used for the pro-minis
+https://www.amazon.com/gp/product/B00QT7LQ88
 
+It is missing the reset pin, plug the 5V/GND/TX/RX pins in, when programming
+hold the reset button until the Arduino IDE starts uploading, then release the reset button.
+
+Wires for this controller:
+  Red: 5V/VCC
+  Black: GND
+  White: RX
+  Green: TX
+
+This one is probably better:
 https://www.amazon.com/gp/product/B014GZTCC6
 
+both use this driver:
 https://www.ftdichip.com/Drivers/VCP.htm
 
 Of note, controller pins:
@@ -52,6 +64,12 @@ Connect I2C devices:
 * GND to GND
 
 Note: If using DHT22 sensor, connect it to pin 4
+
+#### Arduino Pro-Mini 3.3v
+These work great, and are what the final boards will be.
+
+While running the circuit, they draw 3.5ma with the power LED while sleeping, 2.1ma if you break it off. When awake, they go up to 5-6ma but are awake for a fraction of a second every 30s with the default sleep
+settings.
 
 ## Modify the Code
 
