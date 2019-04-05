@@ -12,7 +12,7 @@
 // set up which devices we are using
 //
 // wifi?
-#undef USING_WIRELESS
+#define USING_WIRELESS 1
 
 // sensor choices
 #define USING_BME 1
@@ -94,8 +94,8 @@
 
 #ifdef USE_ESP
 // WiFi settings
-const char* ssid = "ssid";
-const char* password = "password";
+const char* ssid = "na";
+const char* password = "deadbeef";
 #endif
 
 
@@ -503,8 +503,8 @@ void respond_network_clients() {
           client.println("%</p>");
           client.println(getVcc(), 2);
           client.println("V</p></div>");
-          client.println("</body></html>");
-
+          client.println("</body></html>");          
+          
           break;
         }
         if (c == '\n') {
