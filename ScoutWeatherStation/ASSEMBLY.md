@@ -69,5 +69,5 @@ The red leg should be in pin j-10 and the black in j-8
 
 ### Turn on power
 
-![Power Connected and on](photo_scout_kit_power_connected.jpg)
+![Power Connected and on](photo_scout_kit_power_connected_on.jpg)
 
