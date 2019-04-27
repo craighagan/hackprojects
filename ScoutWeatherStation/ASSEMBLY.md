@@ -24,14 +24,14 @@
 - [ ] Place short yellow wire in pin g-28 and e-28
 - [ ] Place short green wire in pin g-27 and e-29
 
-![Short Wires Installed](photo_scout_kit_short_wires.jpg)
+![Short Wires Installed](photo_scout_kit_short_wires_sml.jpg)
 
 
 ### Connect wires between sensor and arduino
 - [ ] Place long red wire in pin h-30 and g-10
 - [ ] Place long black wire in pin h-29 and g-8
 
-![Long Wires Installed](photo_scout_kit_long_wires.jpg)
+![Long Wires Installed](photo_scout_kit_long_wires_sml.jpg)
 
 
 ### Install Arduino
@@ -40,14 +40,14 @@ It should have four pins connecting between f-10 and f-7 (purple line)
 - [ ] Connect arduino yellow wire to pin h-28
 - [ ] Connect arduino green wire to pin h-27
 
-![Arduino Installed](photo_scout_kit_arduino.jpg)
+![Arduino Installed](photo_scout_kit_arduino_sml.jpg)
 
 ### Install Sensor (BME280)
 
 - [ ] Place the sensor in row j, pins 25-30, with "VCC" in pin 30. (should be along pink line).
 - [ ] SDA should line up with green wire, SCL with yellow wire, VCC with red, GND with black
 
-![Sensor Installed](photo_scout_kit_sensor.jpg)
+![Sensor Installed](photo_scout_kit_sensor_sml.jpg)
 
 
 ### Install Display
@@ -55,13 +55,13 @@ It should have four pins connecting between f-10 and f-7 (purple line)
 - [ ] Place the display in row d pins 26-29.
 - [ ] SDA should line up with green wire, SCL with yellow wire, VCC with red, GND with black
 
-![Display Installed](photo_scout_kit_display.jpg)
+![Display Installed](photo_scout_kit_display_sml.jpg)
 
 ### Connect power terminal to battery pack wires
 
 With the legs facing up, the black wire is on the left, red wire on the right
 
-![Power Terminal Connected](photo_scout_kit_power1.jpg)
+![Power Terminal Connected](photo_scout_kit_power1_sml.jpg)
 
 
 ### Connect power terminal to breadboard
