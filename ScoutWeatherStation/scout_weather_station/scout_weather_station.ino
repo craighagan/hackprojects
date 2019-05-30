@@ -18,6 +18,7 @@
 #define USING_BME 1
 #define USING_BMP 2
 #define USING_DHT 3
+#define USING_BMP280 4
 
 // display choices
 #define USING_LCD 1
@@ -37,6 +38,7 @@
 #define OLED_RESET 0
 #define BME_ADDRESS 0x76
 #define BMP_ADDRESS 0x77
+#define BMP280_ADDRESS 0x76
 #define LCD_ADDRESS 0x27
 #define OLED_ADDRESS 0x3C
 #define DHTPIN 4
@@ -79,6 +81,7 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP085_U.h>
 #include <Adafruit_BME280.h>
+#include <Adafruit_BMP280.h>
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -119,6 +122,10 @@ Adafruit_BME280 sensor; // I2C
 Adafruit_BMP085_Unified sensor = Adafruit_BMP085_Unified(10085);
 
 sensors_event_t event;
+#endif
+
+#if SENSOR == USING_BMP280
+Adafruit_BMP280 sensor;
 #endif
 
 //Variables
@@ -243,6 +250,15 @@ void setup_sensor() {
   sensor.begin();
 #endif
 
+
+#if SENSOR == USING_BMP280
+  Serial.println("Using BMP280 I2C Sensor");
+  if (!sensor.begin(0x76)) {
+    Serial.println("Could not find a valid BMP280 sensor, check wiring!");
+    while (1);
+  }
+#endif
+
 #if SENSOR == USING_DHT
   Serial.println("Using DHT Sensor");
   sensor.begin();
@@ -362,6 +378,14 @@ void write_information(float temperature,
   display.println("mbar");
 
 #endif // BME
+
+#if SENSOR == USING_BMP280
+  display.setCursor(18, 43);
+  display.print("Pres: ");
+  display.print(hpascals_to_mbar(pressure), 2);
+  display.println("mbar");
+
+#endif // BMP280
 
 #if SENSOR == USING_BMP
   display.setCursor(18, 43);
@@ -558,6 +582,11 @@ void read_sensors() {
     humidity = 0.0;
 #endif
 
+#if SENSOR == USING_BMP280
+    humidity = 0.0;
+    temperature = sensor.readTemperature();
+    pressure = sensor.readPressure();
+#endif
 }
 
 
