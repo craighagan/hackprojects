@@ -6,7 +6,7 @@ sensor options.
 
 For a display, either an LCD LED or an SSD1306 OLED are supported.
 
-This has been tested on both an ESP8266 and an Arduino board.
+This has been tested on ESP8266 Arduino UNO, Arduino Pro-Mini, and a raw ATMega328p using on board clock (programmed via USBasb).
 
 ## Circuit
 
@@ -72,6 +72,36 @@ While running the circuit, they draw 3.5ma with the power LED while sleeping, 2.
 settings.
 
 Wire it as above, be aware that A4/A5 are offset pins right near the CPU, not along the edge.
+
+#### Atmega328p
+If you're willing to do it, it works great and is comparable to the pro-mini for power/etc.
+
+This works fine. I used a USBasp device to program. Of note, on linux out of the box the arduino IDE didn't see the device/send the right commands, I just ran avrdude by hand after compiling,
+
+e.g.
+
+```
+sudo /home/hagan/Downloads/arduino-1.8.9/hardware/tools/avr/bin/a
+vrdude -C/home/hagan/Downloads/arduino-1.8.9/hardware/tools/avr/e
+tc/avrdude.conf -v -patmega328p -cusbasp -Pusb -e -Ulock:w:0x3F:m -Uefuse:w:0x05
+:m -Uhfuse:w:0xDA:m -Ulfuse:w:0xE2:m
+```
+
+Then:
+
+```
+sudo /home/hagan/Downloads/arduino-1.8.9/hardware/tools/avr/bin/a
+vrdude -C/home/hagan/Downloads/arduino-1.8.9/hardware/tools/avr/e
+tc/avrdude.conf -v -patmega328p -c usbasp -P usb -b57600 -D -Uflash:w:/tmp/ardui
+no_build_506398/scout_weather_station.ino.hex:i
+```
+
+Note: you'll only need to use four pins:
+* PIN20: AVCC
+* PIN22: GND
+* PIN27: SDA
+* PIN28: SCL
+
 
 ## Modify the Code
 
