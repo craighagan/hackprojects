@@ -35,5 +35,5 @@ If your power bank can't handle the device, you'll usually find out as soon as y
 Note: the cable is not Quick-Charge compatible, some QC ports won't give you more than an amp without talking quickcharge.
 
 ### Picture of the finished cable.
-![Picture of the finished cable.](/images/cpap-usb-a-cable.jpeg "Picture of the finished cable.")
+![Picture of the finished cable.](/images/cpap-usb-a-cable.jpg "Picture of the finished cable.")
 
