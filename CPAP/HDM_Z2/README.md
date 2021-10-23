@@ -41,7 +41,9 @@ If you use a USB trigger cable make *_SURE_* you get a 15v part and check the sp
 
 ## 12v USB-C Cable with 15V Voltage Regulator (More Powerbank Choices)
 
-(2020) Many phones/power banks only provide power for quick charging phones like pixels/iphones which charge at 18w requesting 12v @ 1.5amps from the USB-C source. These power banks and chargers do not supply the 15v required for the above cable. By adding a [voltage regulator](https://www.pololu.com/product/2896), you can use a 12v trigger cable and still supply 15v to the device.
+(2020) Many phones/power banks only provide power for quick charging phones like pixels/iphones which charge at 18w requesting 12v @ 1.5amps from the USB-C source. These power banks and chargers do not supply the 15v required for the above cable. By adding a [voltage regulator](https://www.pololu.com/product/2896), you can use a 12v trigger cable and still supply 15v to the device. 18w should supply enough power to run the Z2 at nearly all pressures.
+
+Note: I've found at least one power brick which supports 18w/12v PD and quickcharges my phone, but seems to have trouble with the sudden power surge to start the motor.
 
 ### Parts
 
@@ -70,7 +72,7 @@ The advantage of this cable is that nearly any USB power bank will work, dependi
 
 If your power bank can't handle the device, you'll usually find out as soon as you start breathing, the Z2 will power off when it can't draw enough power.
 
-Note: the cable is not Quick-Charge compatible, some QC ports won't give you more than an amp without talking quickcharge.
+Note: the cable is not Quick-Charge compatible, some QC ports won't give you more than an amp (5w) without talking quickcharge.
 
 ### Picture of the finished cable.
 ![Picture of the finished cable.](images/cpap-usb-a-cable.jpg "Picture of the finished cable.")
