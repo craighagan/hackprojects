@@ -42,6 +42,9 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 
 ## 15V Trigger Cable Option (Easiest)
 
+| :warning: WARNING: making mistakes, wrong, or faulty parts could damage your CPAP machine! |
+| --- |
+
 A USB-C Trigger table connects and produces a fixed, preset voltage if the USB-C charger can supply the requested voltage. This is the easiest way to run an HDM Z2 from a phone power pack.
 
 If you use a USB trigger cable make *_SURE_* you get a 15v part and check the specs on your power bank. I tested with a multimeter, and a PD power brick good for 45+w which support 15v output (most that do 20v will do 15v).  That isn't a big deal to me. As with everything, you're not using your CPAP with the expected cables/power, so caveat emptor; be careful, check your final power and polarity many times.
@@ -49,6 +52,8 @@ If you use a USB trigger cable make *_SURE_* you get a 15v part and check the sp
 I first made my own cable, then bought [this one](https://www.amazon.com/gp/product/B08NTTK8S9) If you buy the premade, make _SURE_ to test it with a multimeter in case you accidentally received the wrong part.
 
 ## 12v USB-C Cable with 15V Voltage Regulator (More Powerbank Choices)
+
+| :warning: WARNING: making mistakes, wrong, or faulty parts could damage your CPAP machine! |
 
 (2020) Many phones/power banks only provide power for quick charging phones like pixels/iphones which charge at 18w requesting 12v @ 1.5amps from the USB-C source. These power banks and chargers do not supply the 15v required for the above cable. By adding a [voltage regulator](https://www.pololu.com/product/2896), you can use a 12v trigger cable and still supply 15v to the device. 18w should supply enough power to run the Z2 at nearly all pressures.
 
@@ -72,6 +77,8 @@ To build, get the following:
 Note: the HDM Z2 will power up with a 12v supply, it will not be able to run the motor, and should power back down. If you have the HDM battery pack, that charges from 12v, which is why you can find 12v car plugs for the HDM Z2, but they're unable to run the device. You can use the same technique here on the car cable to run your Z2 from a car adaptor. Being that I charge my phone from my car, I don't see the point of making a second cable.
 
 ## USB-A Cable with Voltage Regulator (Most Powerbank Choices)
+
+| :warning: WARNING: making mistakes, wrong, or faulty parts could damage your CPAP machine! |
 
 An alternative path, which requires some soldering, is to sacrifice a USB cable, and connect the 5v (red) and Ground (black) cable to the input side of a  [Polulu 15v regulator](https://www.pololu.com/product/2896). Connect the output side to a [5.5mm x 2.1mm barrel connector](https://www.amazon.com/gp/product/B083J24LTZ). Make sure the 15v is connected to the center, and the ground to the outside. Validate that it is center positive and is 15v with a multimeter.
 
