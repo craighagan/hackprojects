@@ -40,7 +40,7 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 ![Picture of my kit](images/cpap-image.png "Picture of my kit, 9v battery is for scale")
 
 
-## Trigger Cable Option (Easiest)
+## 15V Trigger Cable Option (Easiest)
 
 A USB-C Trigger table connects and produces a fixed, preset voltage if the USB-C charger can supply the requested voltage. This is the easiest way to run an HDM Z2 from a phone power pack.
 
