@@ -83,6 +83,31 @@ If your power bank can't handle the device, you'll usually find out as soon as y
 
 Note: the cable is not Quick-Charge compatible, some QC ports won't give you more than an amp (5w) without talking quickcharge.
 
+
+To build, get the following:
+1. USB A Serial Cable, any should do, end doesn't matter. I'd suggest using a good one.
+1. [5.5mm x 2.1mm male barrel connector](https://www.amazon.com/gp/product/B083J24LTZ)
+1. [15v Polulu voltage regulator](https://www.pololu.com/product/2896)
+
+### Building
+1. Cut the cable about midway through, and cut the non-USB-A tip off
+1. Strip cable exposing wires.
+1. If data lines are present (not red/black), cut them, you don't need them
+1. You should now have two cables:
+   1. USB-A to wire
+   1. wire to wire
+1. Strip and tight twist all wire ends
+1. Tin the tips of the wires
+1. Solder one end of the wire to wire cable to the 5.5x2.1mm barrel
+   1. Red to center
+   1. Black to outside
+1. Solder the wires cables to the voltage regulator
+   1. Red on USB-A side to VIN, black to GND
+   1. Red on barrel connector to VOUT, black to GND
+1. Make a box, or otherwise secure the voltage regulator
+1. Plug into a power bank and test with a multi-meter, ensure that the device is producing 15v, center positive from the barrel connector.
+
+
 ### Picture of the finished cable.
-![Picture of the finished cable.](images/cpap-usb-a-cable.jpg "Picture of the finished cable.")
+![Picture of the finished cable without my plastic box so you can see the wires.](images/cpap-usb-a-cable.jpg "Picture of the finished cable.")
 
