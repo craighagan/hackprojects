@@ -7,10 +7,11 @@ I've made three power cables for it. I've used multiple power banks with it:
 1. A 97Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
 1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW)
+1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012)
 
 My favorite is the omnicharge 20, but that is big for backpacking, the other  "cheapo generic" has more capacity for similar weight, so I use it most. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge phone at the same time unless both request the same voltage due to how the device regulates power.
 
-The EnginStar and the OmniCharge can both hook up to a [solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A)
+The EnginStar and the OmniCharge can both hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A)
 
 
 For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is waterproof and very rugged and a [100w fair weather cell](https://www.amazon.com/gp/product/B075YRKVMH) I use with my laptop. Note: the 50w cell came with an adapter to standard barrel jack, but had incorrect polarity on the plug, so it didn't work until I fixed it. That cell is great, with that one nit.
