@@ -9,7 +9,7 @@ I've made three power cables for it. I've used multiple power banks with it:
 1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW)
 1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012)
 
-My favorite is the omnicharge 20, but that is big for backpacking, the other  "cheapo generic" has more capacity for similar weight, so I use it most. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge phone at the same time unless both request the same voltage due to how the device regulates power.
+My favorite is the omnicharge 20, but that is big for backpacking, the baseus has more capacity for similar weight, so I use it most. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge phone at the same time unless both request the same voltage due to how the device regulates power.
 
 The EnginStar and the OmniCharge can both hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A)
 
