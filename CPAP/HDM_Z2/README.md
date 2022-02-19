@@ -41,9 +41,9 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 ### Picture of My Kit, 9v Battery for Scale
 ![Picture of my kit](images/cpap-image.png "Picture of my kit, 9v battery is for scale")
 
-## Where do I camp?
+## Camping?
 
-I often camp with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a [Warbonnet Blackbird XLC hammock](https://www.warbonnetoutdoors.com/product/blackbird-xlc/), and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine.
+I often camp and/or backpack with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a [Warbonnet Blackbird XLC hammock](https://www.warbonnetoutdoors.com/product/blackbird-xlc/), and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine. A challenge for backpacking is that I'm starting with about 1.5-2lbs more weight and a gallon of volume filled in my pack.
 
 # Power Cable Options for running the HDM Z2 Auto from a powerbank
 
