@@ -43,7 +43,7 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 
 ## Where do I camp?
 
-I often camp with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a Warbonnet Blackbird XLC hammock, and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine.
+I often camp with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a [Warbonnet Blackbird XLC hammock](https://www.warbonnetoutdoors.com/product/blackbird-xlc/), and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine.
 
 # Power Cable Options for running the HDM Z2 Auto from a powerbank
 
