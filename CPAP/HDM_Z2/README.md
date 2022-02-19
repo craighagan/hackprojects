@@ -4,15 +4,15 @@ I like to hike and camp, but have sleep apnea. Since I find I'm much better if I
 
 My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/),
 I've made three power cables for it. I've used multiple power banks with it:
-1. A 97Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
+1. A 97Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
 1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW)
 1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012)
 1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW)
 
 My favorite is the omnicharge 20, but that is big for backpacking, the baseus has more capacity for similar weight, so I use it most. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge phone at the same time unless both request the same voltage due to how the device regulates power. I'm testing the Renogy now, intending upon using it for an extended trip away from power. 
 
-The EnginStar, Renogy, and OmniCharge can both hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A)
+The EnginStar, Renogy, and OmniCharge can both hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A).
 
 
 For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is waterproof and very rugged and a [100w fair weather cell](https://www.amazon.com/gp/product/B075YRKVMH) I use with my laptop. Note: the 50w cell came with an adapter to standard barrel jack, but had incorrect polarity on the plug, so it didn't work until I fixed it. That cell is great, with that one nit.
@@ -40,6 +40,11 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 ### Picture of My Kit, 9v Battery for Scale
 ![Picture of my kit](images/cpap-image.png "Picture of my kit, 9v battery is for scale")
 
+## Where do I camp?
+
+I often camp with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a Warbonnet Blackbird XLC hammock, and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine.
+
+# Power Cable Options for running the HDM Z2 Auto from a powerbank
 
 ## 15V Trigger Cable Option (Easiest)
 
