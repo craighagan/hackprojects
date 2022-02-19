@@ -34,6 +34,7 @@ For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is
 1. [Humidity Exchanger](https://www.amazon.com/gp/product/B07PMNMTTC)
 1. [Baseus 45w 114wh Power Bank](https://www.amazon.com/gp/product/B08JV4W4NY)
 
+All of the above fit into a standard one gallon ziptop freezer bag, which I can put into my backpack.
 
 I've been meaning to replace my hose with a smaller [collapsible hose](https://www.amazon.com/INNOTECH-4332594073-TravelHose-Collapsible-CPAP/dp/B01B5DHJ5O), but haven't tried it yet.
 
