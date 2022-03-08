@@ -41,6 +41,8 @@ Note: the HDM Z2 will power up with a 12v supply, it will not be able to run the
 
 ## USB-A Cable with Voltage Regulator (Most Powerbank Choices)
 
+I tried this because USB-A is a lot easier to find, and doesn't unplug as easily as USB-C. It feels to me that I'm getting less air volume when using USB-A vs. UCB-C 15v, but it may be psychological.
+
 | :warning: WARNING: making mistakes, wrong, or faulty parts could damage your CPAP machine! |
 | --- |
 
