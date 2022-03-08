@@ -6,11 +6,11 @@ My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-aut
 I've made three power cables for it. I've used multiple power banks with it:
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
 1. A 97Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
-1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW)
-1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012)
-1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW)
+1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW) This is big and heavy.
+1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012) This needs a handmade USB-A power cable and voltage regulator.
+1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW) Heavy, about 2x the size of the Omnicharge.
 
-My favorite is the Omnicharge 20, but that is big for backpacking, the Baseus has more capacity for similar weight, so I use it most. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge phone at the same time unless both request the same voltage due to how the device regulates power. I'm testing the Renogy now, intending upon using it for an extended trip away from power (call out to [MHE](https://www.mainehighadventure.org/).
+My favorite is the [Omnicharge](https://www.omnicharge.co/products/omni-20/), but that is big for backpacking. My most used is the [Baseus](https://www.amazon.com/gp/product/B08JV4W4NY) which has more capacity for similar weight than the Omnicharge and is smaller. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge a phone at the same time unless both request the same voltage due to how the device regulates power. I'm testing the Renogy now, intending upon using it for an extended trip away from power (call out to [MHE](https://www.mainehighadventure.org/).
 
 The EnginStar, Renogy, and OmniCharge can hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A). The Enginstar's built-in USB-C adaptor doesn't emit enough power, so I use a 12v car USB-C plug.
 
