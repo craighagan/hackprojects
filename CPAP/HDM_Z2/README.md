@@ -1,6 +1,6 @@
 # HDM Z2 Auto
 
-I like to hike and camp, but have sleep apnea. Since I find I'm much better if I get a full night's sleep, I purchased a system that I could travel with and use a standard phone power bank to run. I'm fortunate in that my settings are only about 5mmHg, so I don't use that much power.
+I like to hike and camp, but have sleep apnea. Since I find I'm much better if I get a full night's sleep, I purchased a system that I could travel with and use a standard phone power bank to run. I'm fortunate in that my settings are only about 5cmH2O, so I don't use that much power.
 
 My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/),
 I've made three power cables for it. I've used multiple power banks with it:
