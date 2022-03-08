@@ -44,7 +44,7 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 
 I often camp and/or backpack with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a [Warbonnet Blackbird XLC hammock](https://www.warbonnetoutdoors.com/product/blackbird-xlc/), and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine. If it is really cold, the humidity exchanger can freeze up, I try to remember to put the Z2 into my sleeping bag so that it draws warmer air. A challenge for backpacking is that I'm starting with about 1.5-2lbs more weight and a gallon of volume filled in my pack.
 
-# Power Cable Options for running the HDM Z2 Auto from a powerbank
+# Power Cable for running the HDM Z2 Auto from a USB-C powerbank
 
 ## 15V Trigger Cable
 
@@ -58,5 +58,9 @@ If you use a USB trigger cable make *_SURE_* you get a 15v part and check the sp
 I first made my own cable, then bought [this one](https://www.amazon.com/gp/product/B08NTTK8S9) If you buy the premade, make _SURE_ to test it with a multimeter in case you accidentally received the wrong part.
 
 
-[I've looked into other cable options, separating to avoid confusing people](alternate_cables.md)
+## Other options
+
+I've also looked into other power cables, including USB-A with a voltage regulator. I'm separating those into a different page as they require soldering and the USB-C trigger cable seems to work the best.
+
+[All cable options that I've tested, separating to avoid confusing people](alternate_cables.md)
 
