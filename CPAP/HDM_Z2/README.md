@@ -10,14 +10,14 @@ I've made three power cables for it. I've used multiple power banks with it:
 1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012) This needs a handmade USB-A power cable and voltage regulator.
 1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW) Heavy, about 2x the size of the Omnicharge.
 
-My favorite is the [Omnicharge](https://www.omnicharge.co/products/omni-20/), but that is big for backpacking. My most used is the [Baseus](https://www.amazon.com/gp/product/B08JV4W4NY) which has more capacity for similar weight than the Omnicharge and is smaller. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge a phone at the same time unless both request the same voltage due to how the device regulates power. I'm testing the Renogy now, intending upon using it for an extended trip away from power (call out to [MHE](https://www.mainehighadventure.org/).
+My favorite is the [Omnicharge](https://www.omnicharge.co/products/omni-20/), but that is big for backpacking. My most used is the [Baseus](https://www.amazon.com/gp/product/B08JV4W4NY) which has more capacity for similar weight than the Omnicharge and is smaller. It gives me two nights with between 20-33% capacity remaining depending upon conditions. A catch is that it can't run CPAP and charge a phone at the same time unless both request the same voltage due to how the device regulates power. I'm testing the [Renogy](https://www.amazon.com/gp/product/B0791WDZTW) now, intending upon using it for an extended canoeing trip away from power (call out to [Maine High Adventure](https://www.mainehighadventure.org/)).
 
 The EnginStar, Renogy, and OmniCharge can hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A). The Enginstar's built-in USB-C adaptor doesn't emit enough power, so I use a 12v car USB-C plug.
 
 
 For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is waterproof and very rugged and a [100w fair weather cell](https://www.amazon.com/gp/product/B075YRKVMH) I use with my laptop. Note: the 50w cell came with an adapter to standard barrel jack, but had incorrect polarity on the plug, so it didn't work until I fixed it. That cell is great, with that one nit.
 
-## What is in My kit?
+## What is in my backpacking kit?
 
 1. [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/)
 1. Power Cable, one of:
