@@ -15,7 +15,7 @@ My favorite is the [Omnicharge](https://www.omnicharge.co/products/omni-20/), bu
 The EnginStar, Renogy, and OmniCharge can hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A). The Enginstar's built-in USB-C adaptor doesn't emit enough power, so I use a 12v car USB-C plug.
 
 
-For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is waterproof and very rugged and a [100w fair weather cell](https://www.amazon.com/gp/product/B075YRKVMH) I use with my laptop. Note: the 50w cell came with an adapter to standard barrel jack, but had incorrect polarity on the plug, so it didn't work until I fixed it. That cell is great, with that one nit.
+For solar, I have a [50w](https://www.amazon.com/gp/product/B09154L69K) which is waterproof and very rugged and a [100w fair weather cell](https://www.amazon.com/gp/product/B075YRKVMH) I use with my laptop. Note: the 50w cell came with an adapter to standard barrel jack, but had incorrect polarity on the plug, so it didn't work until I fixed it. That cell is great, with that one nit. I use the solar cell with the jackery, renogy, and omnicharge power banks as they can handle its output.
 
 ## What is in my backpacking kit?
 
