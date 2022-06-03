@@ -5,7 +5,7 @@ I like to hike and camp, but have sleep apnea. Since I find I'm much better if I
 My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/),
 I've made three power cables for it. I've used multiple power banks with it:
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
-1. A 97Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
+1. A 71Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night
 1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW) This is big and heavy.
 1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012) This needs a handmade USB-A power cable and voltage regulator.
 1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW) Heavy, about 2x the size of the Omnicharge.
@@ -39,6 +39,16 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 
 ### Picture of My Kit, 9v Battery for Scale
 ![Picture of my kit](images/cpap-image.png "Picture of my kit, 9v battery is for scale")
+
+### Picture of Maine High Adventure Kit
+1. CPAP, cables, hoses (in orange 2L drybag)
+1. [Omnicharge Omni20+](https://www.omnicharge.co/products/omni-20/)
+1. [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW) Heavy, about 2x the size of the Omnicharge.
+1. [Sunpower 50w solar cell](https://www.amazon.com/gp/product/B07C34GHGV)
+1. Solar power cables and watt meter
+
+
+![Picture of MHA kit](images/mha-cpap-solar-kit.jpg "Picture of my MHA kit, penny is for scale")
 
 ## Camping?
 
