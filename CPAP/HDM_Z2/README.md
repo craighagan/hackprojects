@@ -50,6 +50,11 @@ I've been meaning to replace my hose with a smaller [collapsible hose](https://w
 
 ![Picture of MHA kit](images/mha-cpap-solar-kit.jpg "Picture of my MHA kit, penny is for scale")
 
+I took this equipment with me on a 9 day white and flat water canoe trip with scouts. Kudos on the solar cell and the gear. I dumped my canoe far too many times on rocks, including pinning it with the river flowing right into my gear failing nearly of my water protection (dry bags in side of dry bags inside of a sealed plastic bag got at least damp if not wet). Kudos for the Renogy for living up to its splash proof rating (the omni charge managed to NOT get more than lightly damp). My cpap survived, but, I field stripped and dried it out before energizing it. Only real problem was wet USB cables.
+
+Bigger kudos to the sunpower cell. It was beat up *hard*, lots of scratches, flexing, bumping, banging, etc. I think voltage is down 1-2v, but it is still producing power, just less, note that this cell was damaged before I started and only provided about 2/3 of max rated (a new cell yields 43w on my omnicharge).  My omnicharge is still able to draw 26w from it in good conditions, the renogy about 17w (the renogy is not very good when voltages drop below 18v). The renogy used to be able to get about 23-25w, but I believe the gap is due to the cell producing less voltage from all of the scatches.
+
+
 ## Camping?
 
 I often camp and/or backpack with my family and with scouts (I assist my son's Scoutmaster). In warmer weather, I use a [Warbonnet Blackbird XLC hammock](https://www.warbonnetoutdoors.com/product/blackbird-xlc/), and run hoses over the ridgeline and store the machine in the "shelf", it ends up being more comfortable than my bed at home. In colder weather, I use a tent and things work roughly like at home save that I'm using a different machine. If it is really cold, the humidity exchanger can freeze up, I try to remember to put the Z2 into my sleeping bag so that it draws warmer air. A challenge for backpacking is that I'm starting with about 1.5-2lbs more weight and a gallon of volume filled in my pack.
