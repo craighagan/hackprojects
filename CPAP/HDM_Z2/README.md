@@ -6,7 +6,7 @@ My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-aut
 I've made three power cables for it. I've used multiple power banks with it:
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
 1. A 71Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night. Works well with solar panels.
-1. A 92Wh (25,600mAh) [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP) This provides more power than the omni20 but you lose the inverter and power display. Like with the Omni20, it works very well with solar panels
+1. A 92Wh (25,600mAh) [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP) This provides more power than the omni20 but you lose the inverter and power display. Like with the Omni20, it works very well with solar panels, and is one of my go-to's for backpacking.
 1. A 297Wh (80000mAh) [EnginStar Portable Power Station](https://www.amazon.com/gp/product/B07WQN41V9) with a [65w car USB-C adapter](https://www.amazon.com/gp/product/B08QZ7RTSW) This is big and heavy.
 1. A (26800mAh) [Anker Astro E7](https://www.anker.com/ca/products/variant/astro-e7-26800mah-portable-charger/A1210012) This needs a handmade USB-A power cable and voltage regulator.
 1. A (266wH) [Renogy 266whH Battery](https://www.amazon.com/gp/product/B0791WDZTW) Heavy, about 2x the size of the Omnicharge. This works well with 20+v solar panels, lower power ones not as well.
@@ -38,7 +38,7 @@ For solar, I have the following panels:
    1. [Airfit Std System](https://www.amazon.com/gp/product/B07P5FYYL3)
 1. [Flexible CPAP Hose](https://www.amazon.com/Premium-Universal-CPAP-Tubing-Hose/dp/B01N4RGZ80)
 1. [Humidity Exchanger](https://www.amazon.com/gp/product/B07PMNMTTC)
-1. [Baseus 45w 114wh Power Bank](https://www.amazon.com/gp/product/B08JV4W4NY)
+1. [Baseus 45w 114wh Power Bank](https://www.amazon.com/gp/product/B08JV4W4NY) OR [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP)
 
 All of the above fit into a standard one gallon ziptop freezer bag, which I can put into my backpack.
 
