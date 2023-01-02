@@ -26,6 +26,8 @@ For solar, I have the following panels:
 
 ## What is in my backpacking kit?
 
+[lighter pack list](https://lighterpack.com/r/nuu8hm)
+
 1. [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/)
 1. Power Cable, one of:
    1. [USB-C 15v Trigger Cable](https://www.amazon.com/gp/product/B08NTTK8S9) (see below) I use this the most, it most reliably provides full power to the motor
