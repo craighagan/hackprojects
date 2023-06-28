@@ -4,6 +4,7 @@ I like to hike and camp, but have sleep apnea. Since I find I'm much better if I
 
 My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/),
 I've made three power cables for it. I've used multiple power banks with it:
+1. A 92Wh (25,000mAh) [INIU Power Bank, 25000mAh](https://www.amazon.com/gp/product/B08VDJP7WN) It works pretty well, and puts out enough power (65w) that I don't need to slowly exhale when the machine starts. It also can simultaneously quick charge my phone. Only negative is that it doesn't have a solar input/MPPT port, but it is useful when I'm not planning to use solar power.
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
 1. A 71Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night. Works well with solar panels.
 1. A 92Wh (25,600mAh) [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP) This provides more power than the omni20 but you lose the inverter and power display. Like with the Omni20, it works very well with solar panels, and is one of my go-to's for backpacking.
