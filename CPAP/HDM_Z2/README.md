@@ -4,7 +4,8 @@ I like to hike and camp, but have sleep apnea. Since I find I'm much better if I
 
 My machine is an [HDM Z2 Auto](https://breas.us/products/cpaps-for-travel/z2-auto/),
 I've made three power cables for it. I've used multiple power banks with it:
-1. A 92Wh (25,000mAh) [INIU Power Bank, 25000mAh](https://www.amazon.com/gp/product/B08VDJP7WN) It works pretty well, and puts out enough power (65w) that I don't need to slowly exhale when the machine starts. It also can simultaneously quick charge my phone. Only negative is that it doesn't have a solar input/MPPT port, but it is useful when I'm not planning to use solar power.
+1. A 92Wh (25,000mAh) [INIU Power Bank, 25000mAh](https://www.amazon.com/gp/product/B08VDJP7WN) It works pretty well, and puts out enough power (65w) that I don't need to slowly exhale when the machine starts. It also can simultaneously quick charge my phone. Only negative is that it doesn't have a solar input/MPPT port, but it is useful when I'm not planning to use solar power. I use about 1/3 per night.
+1. A 74Wh (20,0000mAh) [Baseus Power Bank, 20000mAh 65W Metal Laptop Portable Charger](https://www.amazon.com/gp/product/B08THCNNCS) Per above, 65w works well, this also can charge my phone and run my machine.
 1. A 114Wh (30,000mAh) [Baseus battery pack](https://www.amazon.com/gp/product/B08JV4W4NY), it uses about 25% per night (7.5hrs) with my settings
 1. A 71Wh (20,000mAh) [Omnicharge Omni20](https://www.omnicharge.co/products/omni-20/)) is about 40% used after an 7.5hr night. Works well with solar panels.
 1. A 92Wh (25,600mAh) [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP) This provides more power than the omni20 but you lose the inverter and power display. Like with the Omni20, it works very well with solar panels, and is one of my go-to's for backpacking.
@@ -41,7 +42,8 @@ For solar, I have the following panels:
    1. [Airfit Std System](https://www.amazon.com/gp/product/B07P5FYYL3)
 1. [Flexible CPAP Hose](https://www.amazon.com/Premium-Universal-CPAP-Tubing-Hose/dp/B01N4RGZ80)
 1. [Humidity Exchanger](https://www.amazon.com/gp/product/B07PMNMTTC)
-1. [INIU Power Bank, 25000mAh](https://www.amazon.com/gp/product/B08VDJP7WN) OR [Baseus 45w 114wh Power Bank](https://www.amazon.com/gp/product/B08JV4W4NY) OR [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP)
+1. [INIU Power Bank, 25000mAh](https://www.amazon.com/gp/product/B08VDJP7WN) OR [Baseus Power Bank, 20000mAh 65W Metal Laptop Portable Charger](https://www.amazon.com/gp/product/B08THCNNCS) OR [Baseus 45w 114wh Power Bank](https://www.amazon.com/gp/product/B08JV4W4NY) OR [Omnicharge OmniMobile](https://www.amazon.com/gp/product/B07SR337PP)
+1. [Anker Prime 67W USB C Charger, Anker GaN 3-Port Compact Fast PPS Wall Charger](https://www.amazon.com/gp/product/B0C4YTB56H) I keep this around since I take my kit travelling for work, or when I'm at base. This can either run my machine directly or charge the power bank.
 
 All of the above fit into a standard one gallon ziptop freezer bag, which I can put into my backpack.
 
