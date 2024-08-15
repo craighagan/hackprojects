@@ -17,6 +17,7 @@ My favorite is the [Omnicharge](https://www.omnicharge.co/products/omni-20/), bu
 
 The EnginStar, Renogy, and OmniCharge batteries can hook up to a solar cell for recharging. The Omnicharge can't provide USB-C power while charging via solar (it can provide USB-A). The Enginstar's built-in USB-C adaptor doesn't emit enough power, so I use a [12v car USB-C plug](https://www.amazon.com/gp/product/B08QZ7RTSW). Both the Enginstar and the Omnicharge can handle 12v, 18v, and 20v panels, the Renogy can only handle 18v and 20v panels.
 
+A note for people who fly, as of when I am writing this, [the TSA limit for power banks is 100wH](https://www.tsa.gov/travel/security-screening/whatcanibring/items/lithium-batteries-100-watt-hours-or-less-device).
 
 For solar, I have the following panels:
 * [18v SunPower 50 Watt Flexible Monocrystalline panel](https://www.amazon.com/gp/product/B07C34GHGV) waterproof and rugged as well, but not very flexible. One survived multiple mishaps canoing in rapids, including being immersed with full force of a river on it for about 30m. This didn't come with a cable usable for my powerbanks, I used [this one](https://www.amazon.com/gp/product/B09HT2DX2G) 
